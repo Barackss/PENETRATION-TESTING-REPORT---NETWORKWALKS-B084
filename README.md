@@ -6,7 +6,6 @@ W2-PM-FINAL | CYBERSECURITY | NETWORKWALKS
 🚧 Project Overview
 
 
-Field	Detail
 Pentester	Barack Kiambati
 
 
