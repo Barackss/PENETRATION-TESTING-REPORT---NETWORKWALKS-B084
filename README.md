@@ -8,15 +8,6 @@ W2-PM-FINAL | CYBERSECURITY | NETWORKWALKS
 
 Field	Detail
 Pentester	Barack Kiambati
-Program/Batch	Networkwalks-B084
-Date	11th November, 2026
-Modules completed	W2-PM1 (Multiple Kali Tools)
-W2-PM5 (Zenmap Scanning)
-Client/Target	1. Networkwalks (secured written permission already)
-2. My own local LAN Network
-Permission secured from client?	Yes
-Phases covered	Phase 1: Reconnaissance & Footprinting
-Phase 2: Scanning & Network Discovery
 
 
 🎯 1. Liability Disclaimer
@@ -111,5 +102,46 @@ dnsrecon was used to enumerate DNS records. The results provided information rel
 Command used: dnsrecon -d networkwalks.com
 <img width="1365" height="767" alt="dnsrecon results" src="https://github.com/user-attachments/assets/7da5748c-6386-4619-a2b2-112c318bf552" />
 ⚠️ Security relevance: dnsrecon maps the target's entire DNS footprint: mail servers, DNS software version (Bind 9.16.23), SPF policy and cPanel service records. Each record is a potential foothold and helps an attacker understand the email and hosting setup.
+
+5. Network Scanning with Zenmap
+5.1. Background
+Zenmap is the official GUI version of Nmap which can be used on Windows PC. It is a security scanner software tool which is used by Cybersecurity professionals & Hackers. It is a multi-platform (Linux, Windows, Mac OS X, BSD, etc.) free and open source application which aims to make Nmap easy for beginners to use while providing advanced features for experienced Nmap users. Frequently used scans can be saved as profiles to make them easy to run repeatedly.
+
+5.2. Introduction and Objectives
+For this second activity, I used Zenmap to perform network discovery on my local network. This practical required me to:
+
+a). Identify my local IP address and subnet
+b). Discover live hosts
+c). Identify their IP addresses
+d). Identify their MAC addresses
+e). Generate a network topology
+5.2.1. Procedure
+The Windows ipconfig command was entered in my cmd prompt to identify my local IP address and LAN subnet.
+I then entered the subnet into Zenmap and selected Ping Scan to identify active hosts.
+
+<img width="1366" height="768" alt="Screenshot (667)" src="https://github.com/user-attachments/assets/9baed7b9-6c86-4449-9699-7333507b3a9c" />
+
+<img width="1366" height="768" alt="Screenshot (668)" src="https://github.com/user-attachments/assets/d7f89945-c2f7-4331-9438-a5237b3b2753" />
+
+6. Networkwalks Zenmap Quiz Results
+<img width="1366" height="768" alt="Screenshot (669)" src="https://github.com/user-attachments/assets/662b8942-5cd2-4965-8fd1-e5b393f1c34f" />
+
+7. Risk Analysis & Threat Impact
+Passive Reconnaissance Information Exposure: Publicly accessible DNS, MX, and WHOIS metadata allow external attackers to map corporate web infrastructure without triggering intrusion alarms.
+Internal Subnet Exposure: Open ports and unsegmented broadcast domains allow potential lateral movement once an initial network foothold is gained.
+
+9. Security Recommendations
+Implement WHOIS privacy protection on corporate domains to obscure administrative contact vectors.
+Enforce internal network micro-segmentation (VLANs) and ARP inspection controls to limit lateral discovery.
+Harden exposed web servers and update Web Application Firewall (WAF) filtering rulesets.
+
+11. Conclusion
+All Phase 1 and Phase 2 tasks specified in the Week 2 curriculum were successfully executed and validated. Technical evidence including CLI output logs, host IP/MAC tables, screenshot captures, and exported topology graphics have been compiled for portfolio verification.
+
+Author
+Barack  Kiambati
+Cybersecurity Intern — NetworkWalks
+Batch: B084 LinkedIn: www.linkedin.com/in/barack-kiambati-b29208300
+
 
 
